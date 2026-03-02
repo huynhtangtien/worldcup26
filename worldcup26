@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>World Cup Prediction</title>
+</head>
+<body>
+
+<h2>World Cup Prediction</h2>
+
+<div id="login">
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="app" style="display:none;">
+  <h3>Nhập dự đoán</h3>
+  <div id="matches"></div>
+  <button onclick="logout()">Logout</button>
+</div>
+
+</body>
+</html>
