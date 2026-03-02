@@ -9,6 +9,35 @@
 
 <h2>World Cup Prediction</h2>
 <p>Web dự đoán tỉ số - Nhóm bạn</p>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
+  const firebaseConfig = {
+  apiKey: "AIzaSyAxZtYe2-PDI3MFpqL80Pn75IlRURuSKH4",
+  authDomain: "world-cup-2026-e864f.firebaseapp.com",
+  projectId: "world-cup-2026-e864f",
+  storageBucket: "world-cup-2026-e864f.firebasestorage.app",
+  messagingSenderId: "1042319940209",
+  appId: "1:1042319940209:web:f5373e9e9c259f8975d9d0",
+  measurementId: "G-TL5Y4RSCT0"
+};
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  window.login = function() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert("Đăng nhập thành công!");
+      })
+      .catch((error) => {
+        alert("Sai tài khoản hoặc mật khẩu");
+      });
+  }
+</script>
 </body>
 </html>
